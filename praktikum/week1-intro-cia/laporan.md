@@ -5,6 +5,16 @@ Nama: [Deviana Ainul Riqoh]
 NIM: [230202741]  
 Kelas: [5IKRB]  
 
+1. Tujuan
+Menjelaskan sejarah dan evolusi kriptografi dari masa klasik hingga modern.
+Menyebutkan prinsip Confidentiality, Integrity, Availability (CIA) dengan benar.
+Menyimpulkan peran kriptografi dalam sistem keamanan informasi modern.
+Menyiapkan repositori GitHub sebagai media kerja praktikum.
+2. Dasar Teori
+Kriptografi adalah ilmu dan seni untuk menjaga keamanan pesan. Sejarahnya terbagi menjadi era klasik dan modern. Kriptografi klasik, seperti Caesar Cipher dan Vigenère Cipher, beroperasi pada level karakter (huruf) dan sering kali mengandalkan kerahasiaan metode penyandiannya. Seiring berkembangnya teknologi komputasi, kriptografi modern lahir dengan basis matematika yang kuat. Keamanannya tidak lagi bergantung pada kerahasiaan algoritma, melainkan pada kerahasiaan kunci, sebuah prinsip yang dikenal sebagai Prinsip Kerckhoffs. Algoritma modern seperti AES (simetris) dan RSA (asimetris) menjadi fondasi keamanan digital saat ini.
+
+Dalam keamanan informasi, tiga pilar utama dikenal sebagai CIA Triad: Confidentiality (kerahasiaan data dari akses tidak sah), Integrity (keutuhan data dari perubahan tidak sah), dan Availability (ketersediaan data saat dibutuhkan oleh pengguna yang sah). Kriptografi memainkan peran vital dalam menegakkan prinsip-prinsip ini, terutama kerahasiaan dan integritas.
+
 Soal 1 : Ringkasan Sejarah Kriptografi
 1. Era Kriptografi Klasik: Metode Manual
 •	Caesar Cipher: adalah sandi substitusi monoalfabetik tertua yang dikenal, di mana setiap huruf diganti dengan huruf lain dengan pergeseran tetap di seluruh pesan. Meskipun sederhana, keamanannya rendah karena mudah dipecahkan dengan analisis frekuensi.
