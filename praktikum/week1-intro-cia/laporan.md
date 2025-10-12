@@ -49,6 +49,7 @@ pada praktikum minggu ini tidak ada pembuatan atau modifikasi source code progra
 Praktikum ini telah terlaksana dengan baik melalui penyiapan repositori GitHub sebagai sarana kerja serta penyusunan laporan pendahuluan. Proses fork, clone, dan penyesuaian struktur repositori telah dilakukan dengan sukses. Selain itu, laporan yang memuat rangkuman materi dan hasil pengerjaan kuis telah disusun sesuai dengan ketentuan yang diberikan.
 Berikut adalah bukti Screenshot :
 
+![Repo Setup](/praktikum/week1-intro-cia/Screenshot/repository.png)
 
 ---
 
@@ -108,7 +109,7 @@ Praktikum ini memberikan pemahaman awal tentang perkembangan kriptografi dari ma
 
 ## 10. Commit Log
 
-![Repo Setup](/praktikum/week1-intro-cia/Screenshot/repository.png)
+
 
 ```
 (commit 2ee05ea85fbd987754df5ac61c0bc6878b71de10
