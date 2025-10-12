@@ -1,9 +1,9 @@
 # Laporan Praktikum Kriptografi
 Minggu ke-: 2  
-Topik: Cryptosystem (Komponen, Enkripsi & Dekripsi, Simetris & Asimetris)  
-Nama: Deviana Ainul Riqoh 
-NIM: 230202741 
-Kelas: 5IKRB 
+Topik: [Cryptosystem (Komponen, Enkripsi & Dekripsi, Simetris & Asimetris)]  
+Nama: [Deviana Ainul Riqoh] 
+NIM: [230202741]  
+Kelas: [5IKRB]  
 
 ---
 
