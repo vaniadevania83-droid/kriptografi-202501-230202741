@@ -1,98 +1,76 @@
-# 01 Sejarah Kriptografi & Prinsip CIA
+Nama: Deviana Ainul Riqoh
+NIM: 230202741
+Kelas: 5IKRB
+1.	Tujuan
+•	Menjelaskan sejarah dan evolusi kriptografi dari masa klasik hingga modern.
+•	Menyebutkan prinsip Confidentiality, Integrity, Availability (CIA) dengan Benar.
+•	Menyimpulkan peraan kriptografi dalam sistem keamanan informasi modern.
+•	Menyiapkan repositori GitHub sebagai media kerja praktikum.
+2.	Dasar Teori
+3.	Alat dan Bahan
+•	Leptop
+•	Visual Studio Code
+•	Akun GitHub yang aktif
+4.	Langkah Percobaan
+•	Melakukan fork.
+•	Menngubah nama repositori hasil fork.
+•	Melakukan clone repositori yang sudah diubah namanya ke komputer lokal.
+•	Membuat struktur folder baru di dalam repositori lokal.
+•	Di dalam ringkasan mengenai sejarah kriptografi dan prinsip CIA di dalam file lapoan.md .
+•	Menjawab pertanyaan quiz yang diberikan di dalam file laporan.md .
+•	Mengambil screenshot sebagai bukti penyiapan repositori dan menyimpannya di folder screenshots/ .
+•	Menambahkan (add), melakukan commit (commits), dan mengirim (push) perubahan ke repositori GitHub dengan pesan commit week1-intro-cia .
+5.	Source Code
+pada praktikum minggu ini tidak ada pembuatan atau modifikasi source code program. Kegiatan berfokus pada penyimpanan lingkungan kerja dan penyusuan laporan.
+6.	Hasil dan Pembahasan
+Praktikum ini telah terlaksana dengan baik melalui penyiapan repositori GitHub sebagai sarana kerja serta penyusunan laporan pendahuluan. Proses fork, clone, dan penyesuaian struktur repositori telah dilakukan dengan sukses. Selain itu, laporan yang memuat rangkuman materi dan hasil pengerjaan kuis telah disusun sesuai dengan ketentuan yang diberikan.
+Berikut adalah bukti Screenshot :
 
-## Tujuan Pembelajaran
-Setelah mengikuti praktikum ini, mahasiswa diharapkan mampu:  
-1. Menjelaskan **sejarah dan evolusi kriptografi** dari masa klasik hingga modern.  
-2. Menyebutkan **prinsip Confidentiality, Integrity, Availability (CIA)** dengan benar.  
-3. Menyimpulkan **peran kriptografi** dalam sistem keamanan informasi modern.  
-4. Menyiapkan repositori GitHub sebagai media kerja praktikum.  
 
----
+7.	Jawaban Pertanyaan 
+Soal 1 : Ringkasan Sejarah Kriptografi
+1. Era Kriptografi Klasik: Metode Manual
+•	Caesar Cipher: adalah sandi substitusi monoalfabetik tertua yang dikenal, di mana setiap huruf diganti dengan huruf lain dengan pergeseran tetap di seluruh pesan. Meskipun sederhana, keamanannya rendah karena mudah dipecahkan dengan analisis frekuensi.
+•	Vigenere Cipher: adalah pengembangan yang jauh lebih kuat, menggunakan substitusi polialfabetik dengan kata kunci untuk menerapkan beberapa pergeseran Caesar yang berbeda. Teknik ini menyamarkan pola frekuensi huruf secara efektif, menjadikannya sangat sulit dipecahkan dan dijuluki "cipher yang tidak dapat dipecahkan" selama beberapa waktu.
+•	Batasan Utama: bahwa kunci enkripsi dan dekripsi harus dibagikan secara rahasia, dan mereka rentan terhadap serangan analisis frekuensi yang dilakukan dengan tangan atau, dengan mesin.
+2. Perkembangan Kriptografi Modern: Era Digital
+Kriptografi modern terbagi menjadi dua era utama berdasarkan jenis kuncinya:
+1.	Kriptografi Kunci Simetris (Satu Kunci)
+o	Menggunakan kunci yang sama untuk mengenkripsi dan mendeskripsi data.
+o	AES (Advanced Encryption Standard). Ini adalah cipher blok simetris yang sangat cepat, kuat, dan kini menjadi standar global untuk mengamankan data (misalnya, Wi-Fi dan komunikasi online).
+2.	Kriptografi Kunci Asimetris (Kunci Publik)
+o	Menggunakan sepasang kunci: Kunci Publik (dibagikan untuk enkripsi) dan Kunci Pribadi (dirahasiakan untuk dekripsi). Ini memecahkan masalah berbagi kunci secara rahasia.
+o	RSA (Rivest-Shamir-Adleman). Sistem ini memungkinkan komunikasi aman tanpa harus bertemu untuk bertukar kunci rahasia terlebih dahulu. RSA juga digunakan untuk Tanda Tangan Digital.
+Kriptografi modern menjamin tiga hal utama dalam keamanan data:
+•	Kerahasiaan (melalui Enkripsi)
+•	Integritas (melalui Fungsi Hash)
+•	Otentikasi (melalui Tanda Tangan Digital)
+3. Evolusi menuju Kriptografi Kontemporer: Kepercayaan Terdesentralisasi
+•	Blockchain: Sebuah buku besar (ledger) terdistribusi yang mencatat transaksi secara permanen. Blockchain menggunakan fungsi hash dan tanda tangan digital untuk menghubungkan blok data, sehingga catatan di masa lalu hampir mustahil diubah. Inovasi terbesarnya adalah menciptakan konsensus di jaringan yang tidak saling percaya.
+•	Cryptocurrency: Aplikasi paling terkenal dari blockchain (seperti Bitcoin), yang memungkinkan transfer nilai dari satu pihak ke pihak lain (peer-to-peer) tanpa perlu bank atau perantara terpusat.
+Soal 2 : Detail Prinsip CIA
+1. Confidentiality (Kerahasiaan) 
+•	Menjaga data sensitif agar hanya bisa diakses oleh pihak yang berwenang melalui Enkripsi dan Kontrol Akses.
+•	Contoh :
+o	Pesan WhatsApp yang diamankan dengan Enkripsi End-to-End, memastikan hanya pengirim dan penerima yang dapat membaca isi pesan tersebut.
+2. Integrity (Integritas) 
+•	Memastikan data akurat dan utuh (tidak dimodifikasi secara tidak sah) melalui Fungsi Hash atau Tanda Tangan Digital.
+•	Contoh :
+o	Membandingkan nilai SHA-256 Checksum dari file unduhan. Jika nilai hash cocok, itu membuktikan file tersebut belum dirusak sejak dikeluarkan oleh sumbernya.
+3. Availability (Ketersediaan) 
+•	Menjamin sistem atau layanan selalu berfungsi dan dapat diakses oleh pengguna yang berhak, dicapai melalui Redundansi dan Pemulihan Bencana.
+•	Contoh :
+o	Bank online menggunakan server yang didistribusikan (Redundansi) dan Load Balancing untuk memastikan layanan tetap online dan tersedia 24/7, bahkan saat terjadi kegagalan sistem atau serangan DDoS.
+Soal Quiz
+1. Siapa tokoh yang dianggap sebagai bapak kriptografi modern?
+Tokoh yang secara luas diakui sebagai bapak kriptografi modern adalah Claude Shannon. Kontribusinya yang paling signifikan adalah makalah “Communication Theory of Secrecy Systems” (1949), yang memperkenalkan dasar-dasar matematika untuk keamanan kriptografi melalui konsep confusion dan diffusion.
+2. Sebutkan algoritma kunci publik yang populer digunakan saat ini.
+1.	RSA (Rivest Shamir Adleman): Algoritma klasik yang didasarkan pada kesulitan matematis faktorisasi bilangan prima besar. Digunakan luas untuk tanda tangan digital dan pertukaran kunci dalam protokol seperti TLS/SSL.
+2.	ECC (Elliptic Curve Cryptography): Algoritma yang menawarkan keamanan setara dengan RSA tetapi dengan ukuran kunci yang jauh lebih kecil, menjadikannya lebih efisien untuk perangkat mobile dan lingkungan dengan sumber daya terbatas.
+3. Apa perbedaan utama antara kriptografi klasik dan kriptografi modern?
+Perbedaan utama antara kriptografi klasik dan modern terletak pada basis operasional dan manajemen kunci. Kriptografi klasik didasarkan pada manipulasi karakter dan bahasa (seperti substitusi huruf) dan hanya menggunakan kunci simetris yang dibagikan secara rahasia, membuatnya rentan terhadap analisis frekuensi. Sebaliknya, kriptografi modern beroperasi pada bit menggunakan prinsip matematika kompleks dan memanfaatkan baik kunci simetris yang kuat (seperti AES) maupun kunci asimetris (publik/pribadi, seperti RSA) untuk mengatasi masalah distribusi kunci dan meningkatkan keamanan ke level yang jauh lebih tinggi.
+8.	Kesimpulan
+Praktikum ini memberikan pemahaman awal tentang perkembangan kriptografi dari masa klasik hingga modern, serta memperkenalkan konsep dasar keamanan informasi melalui prinsip CIA Triad. Selain itu, lingkungan kerja menggunakan Git dan GitHub telah berhasil dikonfigurasi dengan baik untuk mendukung pelaksanaan praktikum berikutnya.
+9.	Daftar Pustaka
+10.	Commit Log
 
-## Capaian Kegiatan
-Pada akhir sesi ini mahasiswa menghasilkan:  
-- Repositori individu GitHub `kripto-20251-<nim>` yang sudah disiapkan.  
-- Ringkasan individu (1–2 halaman) mengenai sejarah kriptografi dan prinsip CIA.  
-- Jawaban quiz singkat tentang sejarah kriptografi & CIA.  
-- Commit pertama dengan pesan `week1-intro-cia`.  
-
----
-
-## Persiapan Lingkungan
-1. Pastikan akun GitHub aktif.  
-2. Fork repositori template dosen:  
-   ```
-   https://github.com/mhbahara/kriptografi-202501
-   ```
-3. Ubah nama hasil fork menjadi:  
-   ```
-   kripto-20251-<nim>
-   ```  
-   Contoh: `kripto-20251-2310112345`  
-4. Clone ke komputer lokal:  
-   ```bash
-   git clone https://github.com/<username>/kripto-20251-<nim>.git
-   ```
-5. Buat folder untuk tugas minggu 1:  
-   ```
-   praktikum/week1-intro-cia/
-   ├─ screenshots/
-   └─ laporan.md
-   ```
-
----
-
-## Panduan Langkah demi Langkah
-
-### Langkah 1 — Ringkasan Sejarah Kriptografi
-Tuliskan ringkasan (maks. 1 halaman) yang mencakup:  
-- Era **kriptografi klasik** (contoh: Caesar Cipher, Vigenere).  
-- Perkembangan **kriptografi modern** (contoh: AES, RSA).  
-- Evolusi menuju **kriptografi kontemporer** (misalnya: blockchain, cryptocurrency).  
-
-### Langkah 2 — Prinsip CIA
-Jelaskan tiga pilar keamanan informasi:  
-- **Confidentiality** → menjaga kerahasiaan data.  
-- **Integrity** → menjaga keutuhan data dari modifikasi tidak sah.  
-- **Availability** → menjamin ketersediaan layanan sistem.  
-
-Tambahkan contoh nyata minimal 1 untuk tiap aspek.  
-
-### Langkah 3 — Dokumentasi
-- Simpan ringkasan di `laporan.md`.  
-- Buat screenshot evidence setup repo GitHub (`repo name`, `initial commit`). Simpan di folder `screenshots/`.  
-- Lampirkan screenshot di laporan menggunakan sintaks Markdown:  
-  ```markdown
-  ![Setup GitHub](screenshots/repo_setup.png)
-  ```
-
-### Langkah 4 — Quiz Singkat
-Jawab pertanyaan berikut di laporan:  
-1. Siapa tokoh yang dianggap sebagai bapak kriptografi modern?  
-2. Sebutkan algoritma kunci publik yang populer digunakan saat ini.  
-3. Apa perbedaan utama antara kriptografi klasik dan kriptografi modern?  
-
----
-
-## Tugas yang Dikumpulkan
-1. Repositori GitHub individu sudah disetup (`kripto-20251-<nim>`).  
-2. Folder `praktikum/week1-intro-cia/` berisi:  
-   - `laporan.md` (ringkasan + jawaban quiz).  
-   - `screenshots/` (bukti repo setup & contoh CIA).  
-3. Commit dengan pesan:  
-   ```
-   week1-intro-cia
-   ```
-
----
-
-## Rubrik Penilaian
-Mengacu pada RPS Minggu 1: **Total bobot 5% (Quiz 3%, Ringkasan 2%)**  
-
-| Aspek Penilaian         | Bobot | Kriteria                                                                 |
-|--------------------------|-------|--------------------------------------------------------------------------|
-| Quiz singkat             | 3%    | Jawaban benar, singkat, sesuai konsep sejarah & CIA                      |
-| Ringkasan individu       | 2%    | Menjelaskan sejarah kripto, prinsip CIA, dan contoh peran kripto         |
-| Evidence Git & laporan   | -     | Struktur repo rapi, ada screenshot, commit sesuai format (syarat sah)    |
-
----

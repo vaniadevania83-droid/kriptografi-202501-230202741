@@ -51,4 +51,12 @@ Tokoh yang secara luas diakui sebagai bapak kriptografi modern adalah Claude Sha
 3. Apa perbedaan utama antara kriptografi klasik dan kriptografi modern?
 Perbedaan utama antara kriptografi klasik dan modern terletak pada basis operasional dan manajemen kunci. Kriptografi klasik didasarkan pada manipulasi karakter dan bahasa (seperti substitusi huruf) dan hanya menggunakan kunci simetris yang dibagikan secara rahasia, membuatnya rentan terhadap analisis frekuensi. Sebaliknya, kriptografi modern beroperasi pada bit menggunakan prinsip matematika kompleks dan memanfaatkan baik kunci simetris yang kuat (seperti AES) maupun kunci asimetris (publik/pribadi, seperti RSA) untuk mengatasi masalah distribusi kunci dan meningkatkan keamanan ke level yang jauh lebih tinggi.
 
-![Hasil Output](screenshots/repository.png)
+![Repo Setup](/praktikum/week1-intro-cia/Screenshot/repository.png)
+
+```
+(commit abc12345
+Author: Deviana Ainul Riqh <email>
+Date:   2025-09-20
+
+    week1-intro: sejrah kriptografi dan prisip CIA )
+```
