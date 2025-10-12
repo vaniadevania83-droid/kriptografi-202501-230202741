@@ -112,7 +112,7 @@ Praktikum ini memberikan pemahaman awal tentang perkembangan kriptografi dari ma
 
 ```
 (commit 2ee05ea85fbd987754df5ac61c0bc6878b71de10
-Author: Deviana Ainul Riqh <vaniadevania83@gmail.com>
+Author: Deviana Ainul Riqoh <vaniadevania83@gmail.com>
 Date:   2025-09-12
 
     week1-intro: sejrah kriptografi dan prisip CIA )
