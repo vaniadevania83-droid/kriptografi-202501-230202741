@@ -5,6 +5,36 @@ Nama: [Deviana Ainul Riqoh]
 NIM: [230202741]  
 Kelas: [5IKRB]  
 
+1.	Tujuan
+•	Menjelaskan sejarah dan evolusi kriptografi dari masa klasik hingga modern.
+•	Menyebutkan prinsip Confidentiality, Integrity, Availability (CIA) dengan Benar.
+•	Menyimpulkan peraan kriptografi dalam sistem keamanan informasi modern.
+•	Menyiapkan repositori GitHub sebagai media kerja praktikum.
+2.	Dasar Teori
+Kriptografi merupakan bidang ilmu sekaligus seni yang berfokus pada upaya menjaga kerahasiaan dan keamanan pesan. Perkembangannya terbagi dalam dua masa, yaitu era klasik dan era modern. Pada masa klasik, metode seperti Caesar Cipher dan Vigenère Cipher bekerja dengan memanipulasi huruf-huruf dalam teks dan sangat bergantung pada kerahasiaan teknik penyandiannya. Namun, dengan kemajuan teknologi komputer, muncul kriptografi modern yang didasarkan pada konsep matematika yang lebih kompleks. Dalam era ini, keamanan sistem tidak lagi bergantung pada kerahasiaan algoritmanya, melainkan pada kunci enkripsi, sesuai dengan Prinsip Kerckhoffs. Beberapa algoritma modern yang populer dan menjadi dasar keamanan digital saat ini antara lain AES (kriptografi simetris) dan RSA (kriptografi asimetris).
+Dalam konteks keamanan informasi, terdapat tiga komponen utama yang dikenal dengan istilah CIA Triad, yaitu Confidentiality (menjaga data agar tidak diakses pihak yang tidak berwenang), Integrity (menjamin data tetap utuh dan tidak diubah secara tidak sah), serta Availability (memastikan data dapat diakses ketika dibutuhkan oleh pengguna yang berhak). Kriptografi berperan penting dalam penerapan ketiga prinsip tersebut, khususnya dalam menjaga kerahasiaan dan integritas data.
+
+3.	Alat dan Bahan
+•	Leptop
+•	Visual Studio Code
+•	Akun GitHub yang aktif
+4.	Langkah Percobaan
+•	Melakukan fork.
+•	Menngubah nama repositori hasil fork.
+•	Melakukan clone repositori yang sudah diubah namanya ke komputer lokal.
+•	Membuat struktur folder baru di dalam repositori lokal.
+•	Di dalam ringkasan mengenai sejarah kriptografi dan prinsip CIA di dalam file lapoan.md .
+•	Menjawab pertanyaan quiz yang diberikan di dalam file laporan.md .
+•	Mengambil screenshot sebagai bukti penyiapan repositori dan menyimpannya di folder screenshots/ .
+•	Menambahkan (add), melakukan commit (commits), dan mengirim (push) perubahan ke repositori GitHub dengan pesan commit week1-intro-cia .
+5.	Source Code
+pada praktikum minggu ini tidak ada pembuatan atau modifikasi source code program. Kegiatan berfokus pada penyimpanan lingkungan kerja dan penyusuan laporan.
+6.	Hasil dan Pembahasan
+Praktikum ini telah terlaksana dengan baik melalui penyiapan repositori GitHub sebagai sarana kerja serta penyusunan laporan pendahuluan. Proses fork, clone, dan penyesuaian struktur repositori telah dilakukan dengan sukses. Selain itu, laporan yang memuat rangkuman materi dan hasil pengerjaan kuis telah disusun sesuai dengan ketentuan yang diberikan.
+Berikut adalah bukti Screenshot :
+
+
+7.	Jawaban Pertanyaan 
 Soal 1 : Ringkasan Sejarah Kriptografi
 1. Era Kriptografi Klasik: Metode Manual
 •	Caesar Cipher: adalah sandi substitusi monoalfabetik tertua yang dikenal, di mana setiap huruf diganti dengan huruf lain dengan pergeseran tetap di seluruh pesan. Meskipun sederhana, keamanannya rendah karena mudah dipecahkan dengan analisis frekuensi.
@@ -38,10 +68,6 @@ o	Membandingkan nilai SHA-256 Checksum dari file unduhan. Jika nilai hash cocok,
 •	Menjamin sistem atau layanan selalu berfungsi dan dapat diakses oleh pengguna yang berhak, dicapai melalui Redundansi dan Pemulihan Bencana.
 •	Contoh :
 o	Bank online menggunakan server yang didistribusikan (Redundansi) dan Load Balancing untuk memastikan layanan tetap online dan tersedia 24/7, bahkan saat terjadi kegagalan sistem atau serangan DDoS.
-
-
-
-
 Soal Quiz
 1. Siapa tokoh yang dianggap sebagai bapak kriptografi modern?
 Tokoh yang secara luas diakui sebagai bapak kriptografi modern adalah Claude Shannon. Kontribusinya yang paling signifikan adalah makalah “Communication Theory of Secrecy Systems” (1949), yang memperkenalkan dasar-dasar matematika untuk keamanan kriptografi melalui konsep confusion dan diffusion.
@@ -50,6 +76,10 @@ Tokoh yang secara luas diakui sebagai bapak kriptografi modern adalah Claude Sha
 2.	ECC (Elliptic Curve Cryptography): Algoritma yang menawarkan keamanan setara dengan RSA tetapi dengan ukuran kunci yang jauh lebih kecil, menjadikannya lebih efisien untuk perangkat mobile dan lingkungan dengan sumber daya terbatas.
 3. Apa perbedaan utama antara kriptografi klasik dan kriptografi modern?
 Perbedaan utama antara kriptografi klasik dan modern terletak pada basis operasional dan manajemen kunci. Kriptografi klasik didasarkan pada manipulasi karakter dan bahasa (seperti substitusi huruf) dan hanya menggunakan kunci simetris yang dibagikan secara rahasia, membuatnya rentan terhadap analisis frekuensi. Sebaliknya, kriptografi modern beroperasi pada bit menggunakan prinsip matematika kompleks dan memanfaatkan baik kunci simetris yang kuat (seperti AES) maupun kunci asimetris (publik/pribadi, seperti RSA) untuk mengatasi masalah distribusi kunci dan meningkatkan keamanan ke level yang jauh lebih tinggi.
+8.	Kesimpulan
+Praktikum ini memberikan pemahaman awal tentang perkembangan kriptografi dari masa klasik hingga modern, serta memperkenalkan konsep dasar keamanan informasi melalui prinsip CIA Triad. Selain itu, lingkungan kerja menggunakan Git dan GitHub telah berhasil dikonfigurasi dengan baik untuk mendukung pelaksanaan praktikum berikutnya.
+9.	Daftar Pustaka
+10.	Commit Log
 
 ![Repo Setup](/praktikum/week1-intro-cia/Screenshot/repository.png)
 
