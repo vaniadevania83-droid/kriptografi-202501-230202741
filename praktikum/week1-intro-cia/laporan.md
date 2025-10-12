@@ -116,5 +116,5 @@ Praktikum ini memberikan pemahaman awal tentang perkembangan kriptografi dari ma
 Author: Deviana Ainul Riqoh <vaniadevania83@gmail.com>
 Date:   2025-09-12
 
-    week1-intro: sejrah kriptografi dan prisip CIA )
+    week1-intro: sejarah kriptografi dan prisip CIA )
 ```
