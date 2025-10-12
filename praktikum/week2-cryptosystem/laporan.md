@@ -108,8 +108,8 @@ Contoh:
 Contoh:
 ```
 commit abc12345
-Author: Nama Mahasiswa <email>
-Date:   2025-09-20
+Author: Deviana Ainul Riqoh <vaniadevania83@gmail.com>
+Date:   2025-10-12
 
     week2-cryptosystem: implementasi Caesar Cipher dan laporan )
 ```
