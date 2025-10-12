@@ -84,9 +84,9 @@ Praktikum ini memberikan pemahaman awal tentang perkembangan kriptografi dari ma
 ![Repo Setup](/praktikum/week1-intro-cia/Screenshot/repository.png)
 
 ```
-(commit abc12345
-Author: Deviana Ainul Riqh <email>
-Date:   2025-09-20
+(commit 2ee05ea85fbd987754df5ac61c0bc6878b71de10
+Author: Deviana Ainul Riqh <vaniadevania83@gmail.com>
+Date:   2025-09-12
 
     week1-intro: sejrah kriptografi dan prisip CIA )
 ```
