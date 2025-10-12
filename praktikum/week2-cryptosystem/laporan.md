@@ -14,15 +14,15 @@ Kelas: 5IKRB
 ---
 
 ## 2. Dasar Teori
-Sebuah kriptosistem adalah kerangka kerja yang terdiri dari lima elemen kunci untuk mengamankan komunikasi: pesan asli (plaintext), pesan tersandi (ciphertext), algoritma enkripsi dan dekripsi (metode matematis untuk transformasi), serta kunci (parameter rahasia yang mengendalikan proses). Dalam sistem modern, algoritma biasanya bersifat publik, dan keamanan sistem sepenuhnya bergantung pada kerahasiaan kunci yang digunakan. Secara umum, kriptosistem terbagi menjadi dua kelompok utama: kriptografi simetris, yang menggunakan satu kunci yang sama untuk menyandikan dan membuka sandi; dan kriptografi asimetris (kunci publik), yang menggunakan sepasang kunci berbeda—satu kunci publik untuk mengenkripsi dan satu kunci privat untuk mendekripsi.
+Sebuah kriptosistem adalah kerangka kerja yang terdiri dari lima elemen kunci untuk mengamankan komunikasi: pesan asli (plaintext), pesan tersandi (ciphertext), algoritma enkripsi dan dekripsi (metode matematis untuk transformasi), serta kunci (parameter rahasia yang mengendalikan proses). Dalam sistem modern, algoritma biasanya bersifat publik, dan keamanan sistem sepenuhnya bergantung pada kerahasiaan kunci yang digunakan. Secara umum, kriptosistem terbagi menjadi dua kelompok utama: kriptografi simetris, yang menggunakan satu kunci yang sama untuk menyandikan dan membuka sandi; dan kriptografi asimetris (kunci publik), yang menggunakan sepasang kunci berbeda satu kunci publik untuk mengenkripsi dan satu kunci privat untuk mendekripsi.
 
 ---
 
 ## 3. Alat dan Bahan
-(- Python 3.11  
+- Python 3.11  
 - Visual Studio Code   
 - Git dan akun GitHub  
-- Draw.io )
+- Draw.io 
 
 ---
 
