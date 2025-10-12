@@ -8,38 +8,38 @@ Kelas: 5IKRB
 ---
 
 ## 1. Tujuan
-1. Mengidentifikasi komponen dasar kriptosistem (plaintext, ciphertext, kunci, algoritma).
-2. Menggambarkan proses enkripsi dan dekripsi sederhana.
-3. Mengklasifikasikan jenis kriptosistem (simetris dan asimetris).
+(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
 
 ---
 
 ## 2. Dasar Teori
-Sebuah kriptosistem adalah kerangka kerja yang terdiri dari lima elemen kunci untuk mengamankan komunikasi: pesan asli (plaintext), pesan tersandi (ciphertext), algoritma enkripsi dan dekripsi (metode matematis untuk transformasi), serta kunci (parameter rahasia yang mengendalikan proses). Dalam sistem modern, algoritma biasanya bersifat publik, dan keamanan sistem sepenuhnya bergantung pada kerahasiaan kunci yang digunakan. Secara umum, kriptosistem terbagi menjadi dua kelompok utama: kriptografi simetris, yang menggunakan satu kunci yang sama untuk menyandikan dan membuka sandi; dan kriptografi asimetris (kunci publik), yang menggunakan sepasang kunci berbeda—satu kunci publik untuk mengenkripsi dan satu kunci privat untuk mendekripsi.
+(Ringkas teori relevan (cukup 2–3 paragraf).  
+Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
 
 ---
 
 ## 3. Alat dan Bahan
-(- Python 3.11  
-- Visual Studio Code   
+(- Python 3.x  
+- Visual Studio Code / editor lain  
 - Git dan akun GitHub  
-- Draw.io  )
+- Library tambahan (misalnya pycryptodome, jika diperlukan)  )
 
 ---
 
 ## 4. Langkah Percobaan
-1. Membuat diagram/skema alur kerja kriptosistem dasar yang menggambarkan proses enkripsi dan dekripsi, lalu menyimpannya sebagai screenshots/diagram_kriptosistem.png.
-2. Membuat file Python bernama simple_crypto.py di dalam folder praktikum/week2-cryptosystem/src/.
-3. Menyalin dan menulis kode program dari modul praktikum untuk mengimplementasikan Caesar Cipher sederhana.
-4. Mengubah variabel message di dalam program menjadi (<2310112345>).
-5. Menjalankan program dari terminal dengan perintah python src/simple_crypto.py.
-6. Mengambil screenshot hasil eksekusi program dan menyimpannya sebagai screenshots/hasil_eksekusi.png.
-7. Menyusun laporan laporan.md yang berisi semua komponen, dari tujuan hingga jawaban diskusi.
-8. Melakukan commit dan push ke repositori GitHub dengan pesan week2-cryptosystem.
+(Tuliskan langkah yang dilakukan sesuai instruksi.  
+Contoh format:
+1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
+2. Menyalin kode program dari panduan praktikum.
+3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
 
 ---
 
 ## 5. Source Code
+(Salin kode program utama yang dibuat atau dimodifikasi.  
+Gunakan blok kode:
+
+```python
 def shift_cipher(text: str, shift: int = 3) -> str:
     result = []
     for ch in text:
@@ -62,7 +62,11 @@ def main():
      
 if __name__ == "__main__":
     main()
+ ...
+```
+)
 
+---
 
 ## 6. Hasil dan Pembahasan
 (- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
@@ -72,8 +76,9 @@ if __name__ == "__main__":
 
 Hasil eksekusi program Caesar Cipher:
 
-![Hasil Eksekusi](/praktikum/week2-cryptosystem/screensshot/hasil_eksekusi.png)
-![Hasil Input](/praktikum/week2-cryptosystem/screensshot/diagram_kriptosistem.jpg)
+![Hasil Eksekusi](screenshots/output.png)
+![Hasil Input](screenshots/input.png)
+![Hasil Output](screenshots/output.png)
 )
 
 ---
@@ -91,7 +96,10 @@ Hasil eksekusi program Caesar Cipher:
 ---
 
 ## 9. Daftar Pustaka
-
+(Cantumkan referensi yang digunakan.  
+Contoh:  
+- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
+- Stallings, W. *Cryptography and Network Security*.  )
 
 ---
 
@@ -100,7 +108,7 @@ Hasil eksekusi program Caesar Cipher:
 Contoh:
 ```
 commit abc12345
-Author: Deviana Ainul Riqoh <vaniadevania83@gmail.com>
+Author: Nama Mahasiswa <email>
 Date:   2025-09-20
 
     week2-cryptosystem: implementasi Caesar Cipher dan laporan )
