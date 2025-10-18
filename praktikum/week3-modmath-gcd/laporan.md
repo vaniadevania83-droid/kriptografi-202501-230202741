@@ -39,7 +39,7 @@ Greatest Common Divisor (GCD) dari dua bilangan adalah bilangan bulat positif te
 
 
 ```python
-# contoh potongan kode
+
 # --- Aritmetika Modular ---
 def A(a,b,n):return (a+b)%n               # Penjumlahan
 def B(a,b,n):return ((a-b)%n+n)%n        # Pengurangan (aman)
