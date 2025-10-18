@@ -137,7 +137,7 @@ Kegiatan praktikum ini telah sukses menerapkan operasi fundamental dari teori bi
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
-commit abc12345
+commit 9d5ef67b8c99f9ed99ee3209901ba24d67af241c
 Author: Deviana Ainul Riqoh <vaniadevania83@gmail.com>
 Date:   2025-10-18
 
