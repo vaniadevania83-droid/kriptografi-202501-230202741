@@ -129,7 +129,7 @@ Percobaan ini menunjukkan bahwa entropi kunci adalah ekuivalen dengan panjang bi
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
-commit abc12345
+commit b5fa2a20c7eaf7adf03b688d8d40e12acba47667
 Author: Deviana Ainul Riqoh <vaniadevania83@gmail.com>
 Date:   2025-09-20
 
