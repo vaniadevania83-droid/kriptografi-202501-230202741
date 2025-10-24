@@ -131,7 +131,7 @@ Contoh:
 ```
 commit b5fa2a20c7eaf7adf03b688d8d40e12acba47667
 Author: Deviana Ainul Riqoh <vaniadevania83@gmail.com>
-Date:   2025-09-20
+Date:   2025-10-25
 
     week4-cryptosystem: Entropy & Unicity Distance (Evaluasi Kekuatan Kunci dan Brute Force) )
 ```
