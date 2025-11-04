@@ -175,9 +175,9 @@ if __name__ == "__main__":
 
 Hasil eksekusi program Caesar Cipher:
 
-![Hasil Eksekusi1](/praktikum/week5-cipher-klasik/Screenshot/hasil1.png)
-![Hasil Eksekusi2](/praktikum/week5-cipher-klasik/Screenshot/hasil2.png)
-
+![Hasil Eksekusi1](/praktikum/week5-cipher-klasik/Screenshot/hasil-caesar.png)
+![Hasil Eksekusi2](/praktikum/week5-cipher-klasik/Screenshot/hasil-transpose.png)
+![Hasil Eksekusi2](/praktikum/week5-cipher-klasik/Screenshot/hasil-vigenere.png)
 ---
 
 ## 7. Jawaban Pertanyaan
