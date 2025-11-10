@@ -158,9 +158,9 @@ if __name__ == "__main__":
 
 Hasil eksekusi program Caesar Cipher:
 
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
+![Hasil Eksekusi](/praktikum/week6-cipher-modern/srenshot/hasil-aes.png)
+![Hasil Input](/praktikum/week6-cipher-modern/srenshot/hasil-des.png)
+![Hasil Output](/praktikum/week6-cipher-modern/srenshot/hasil-sra.png)
 )
 
 ---
@@ -173,7 +173,7 @@ RSA adalah algoritma asimetris (asymmetric cipher atau public-key cryptography) 
 2.	Mengapa AES lebih banyak digunakan dibanding DES di era modern?
 AES (Advanced Encryption Standard) lebih banyak digunakan dibandingkan DES (Data Encryption Standard) di era modern karena alasan utama yang berkaitan dengan keamanan kriptografi dan efisiensi komputasi:
 a.	Panjang Kunci yang Lebih Besar: Kunci DES hanya 56 bit (efektif), yang saat ini dianggap terlalu pendek. Dengan peningkatan daya komputasi modern, kunci 56-bit dapat dipecahkan menggunakan serangan brute-force dalam waktu yang relatif singkat (bahkan kurang dari 24 jam oleh mesin khusus). Sebaliknya, AES menggunakan kunci dengan panjang 128, 192, atau 256 bit, yang secara eksponensial lebih sulit untuk dipecahkan.
-Contoh: Untuk AES-128, ada $2^{128}$ kemungkinan kunci, yang menjadikannya aman secara komputasi untuk masa mendatang.
+Contoh: Untuk AES-128, ada 2^{128} kemungkinan kunci, yang menjadikannya aman secara komputasi untuk masa mendatang.
 b.	Struktur Algoritma yang Lebih Baik: AES didasarkan pada Rijndael cipher, yang merupakan Substitution-Permutation Network (SPN). Sementara DES menggunakan Feistel structure. Struktur AES (SPN) dianggap lebih efisien dan lebih resisten terhadap beberapa jenis serangan kriptanalisis dibandingkan DES.
 c.	Kecepatan dan Efisiensi: Meskipun memiliki keamanan yang jauh lebih tinggi, AES dirancang agar sangat cepat dalam implementasi perangkat lunak maupun perangkat keras. Dalam banyak kasus, AES-128 berjalan lebih cepat daripada DES.
 d.	Standar Pemerintah: AES telah diadopsi oleh NIST (National Institute of Standards and Technology) Amerika Serikat sebagai standar enkripsi federal sejak tahun 2001, menggantikan DES, dan direkomendasikan untuk melindungi informasi rahasia oleh pemerintah di seluruh dunia.

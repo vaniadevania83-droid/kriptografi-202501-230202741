@@ -1,31 +1,30 @@
-def run_des_simulation():
-    """Menjalankan simulasi enkripsi dan dekripsi DES (MODE_ECB)."""
-    try:
-        # 1. Pembangkitan Kunci (64 bit = 8 byte)
-        key = get_random_bytes(8)
-        
-        # Data yang akan dienkripsi (harus kelipatan 8 byte untuk ECB)
-        plaintext = b"ABCDEFGH" 
+from Crypto.Cipher import DES
+from Crypto.Random import get_random_bytes
+from Crypto.Util.Padding import pad, unpad # Tambahkan impor untuk padding
 
-        # 2. Enkripsi
-        cipher = DES.new(key, DES.MODE_ECB)
-        ciphertext = cipher.encrypt(plaintext)
-        
-        print("--- DES (Data Encryption Standard) ---")
-        print(f"Kunci (8 byte): {key.hex()}")
-        print(f"Plaintext: {plaintext.decode()}")
-        print(f"Ciphertext: {ciphertext.hex()}")
+# --- Parameter Kunci & Cipher ---
+key = get_random_bytes(8) # Kunci 64 bit (8 byte)
+cipher = DES.new(key, DES.MODE_ECB)
 
-        # 3. Dekripsi
-        # Kunci dan mode harus sama.
-        decipher = DES.new(key, DES.MODE_ECB)
-        decrypted = decipher.decrypt(ciphertext)
-        
-        print(f"Decrypted: {decrypted.decode()}")
-        print("-" * 37)
+# --- Proses Enkripsi ---
+# Plaintext lebih panjang, tidak kelipatan 8, atau sembarang
+plaintext = b"Ini adalah pesan rahasia yang lebih panjang." 
 
-    except Exception as e:
-        print(f"Terjadi Error pada DES: {e}")
+# Lakukan padding agar panjang plaintext menjadi kelipatan 8 byte
+padded_plaintext = pad(plaintext, DES.block_size) 
+print("Panjang Plaintext (setelah padding):", len(padded_plaintext))
 
-if __name__ == "__main__":
-    run_des_simulation()
+ciphertext = cipher.encrypt(padded_plaintext)
+print("Ciphertext:", ciphertext.hex()) # Tampilkan sebagai hex agar lebih mudah dibaca
+
+# --- Proses Dekripsi ---
+# Objek decipher harus dibuat ulang (best practice, walau bisa menggunakan objek cipher yang sama)
+decipher = DES.new(key, DES.MODE_ECB)
+decrypted = decipher.decrypt(ciphertext)
+
+# Hapus padding untuk mendapatkan plaintext asli
+try:
+    unpadded_decrypted = unpad(decrypted, DES.block_size)
+    print("Decrypted:", unpadded_decrypted.decode())
+except ValueError:
+    print("Gagal mendekripsi atau membatalkan padding.")
