@@ -15,9 +15,7 @@ Kelas: [5IKRB]
 ---
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
-
+Kriptografi modern dibagi menjadi dua kategori utama: simetris dan asimetris. DES (Data Encryption Standard) dan AES (Advanced Encryption Standard) termasuk dalam kategori algoritma simetris atau block cipher, yang berarti mereka menggunakan kunci yang sama untuk enkripsi dan dekripsi data. DES menggunakan kunci 56-bit yang kini dianggap usang, sementara AES, penggantinya, menawarkan keamanan yang jauh lebih tinggi dengan kunci 128, 192, atau 256 bit. Sebaliknya, RSA (Rivest–Shamir–Adleman) adalah algoritma asimetris (public-key cryptography), menggunakan sepasang kunci (publik dan privat) yang berbeda. Kunci publik digunakan untuk enkripsi, dan kunci privat digunakan untuk dekripsi. Keamanan RSA didasarkan pada kesulitan matematis dalam memfaktorkan bilangan komposit besar, yang membutuhkan panjang kunci minimal 2048 bit untuk keamanan modern. Algoritma simetris (seperti AES) sangat cepat dan cocok untuk data besar, sedangkan algoritma asimetris (seperti RSA) lebih lambat dan ideal untuk pertukaran kunci dan tanda tangan digital.
 ---
 
 ## 3. Alat dan Bahan
@@ -28,17 +26,17 @@ Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
 ---
 
 ## 4. Langkah Percobaan
-(Tuliskan langkah yang dilakukan sesuai instruksi.  
-Contoh format:
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
-2. Menyalin kode program dari panduan praktikum.
-3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
-
+1. Persiapan Lingkungan: Membuat folder struktur yang diminta (praktikum/week6-cipher-modern/src/, screenshots/, dan laporan.md).
+2. Instalasi Pustaka: Menjalankan perintah pip install pycryptodome.
+3. Implementasi DES (Simulasi): Membuat file src/des.py untuk mensimulasikan enkripsi dan dekripsi DES mode ECB menggunakan kunci 64-bit.
+4. Implementasi AES-128 (Wajib): Membuat file src/aes.py untuk mengimplementasikan AES dengan kunci 128-bit menggunakan mode EAX (yang menyertakan autentikasi).
+5. Implementasi RSA (Wajib): Membuat file src/rsa.py untuk mengimplementasikan pembangkitan kunci RSA 2048-bit, diikuti dengan enkripsi menggunakan kunci publik dan dekripsi menggunakan kunci privat.
+6. Pengujian Program: Menjalankan masing-masing program (misalnya, python src/aes.py dan python src/rsa.py) dan memverifikasi bahwa decrypted text sesuai dengan plaintext.
+7. Mengambil screenshot hasil eksekusi dan menyusun laporan ini.
 ---
 
 ## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
+
 
 ```python
 def run_aes_implementation():
@@ -149,7 +147,7 @@ def run_rsa_implementation():
 if __name__ == "__main__":
     run_rsa_implementation()
 ```
-)
+
 
 ---
 
@@ -177,6 +175,7 @@ Contoh: Untuk AES-128, ada 2^{128} kemungkinan kunci, yang menjadikannya aman se
 b.	Struktur Algoritma yang Lebih Baik: AES didasarkan pada Rijndael cipher, yang merupakan Substitution-Permutation Network (SPN). Sementara DES menggunakan Feistel structure. Struktur AES (SPN) dianggap lebih efisien dan lebih resisten terhadap beberapa jenis serangan kriptanalisis dibandingkan DES.
 c.	Kecepatan dan Efisiensi: Meskipun memiliki keamanan yang jauh lebih tinggi, AES dirancang agar sangat cepat dalam implementasi perangkat lunak maupun perangkat keras. Dalam banyak kasus, AES-128 berjalan lebih cepat daripada DES.
 d.	Standar Pemerintah: AES telah diadopsi oleh NIST (National Institute of Standards and Technology) Amerika Serikat sebagai standar enkripsi federal sejak tahun 2001, menggantikan DES, dan direkomendasikan untuk melindungi informasi rahasia oleh pemerintah di seluruh dunia.
+
 3.	Mengapa RSA dikategorikan sebagai algoritma asimetris, dan bagaimana proses pembangkitan kuncinya?
 RSA disebut Asimetris karena ia menggunakan dua kunci berbeda (sepasang) untuk melakukan enkripsi dan dekripsi. Kunci ini adalah Kunci Publik (untuk mengenkripsi, dapat disebar) dan Kunci Privat (untuk mendekripsi, harus dirahasiakan).
 Proses Pembangkitan Kunci:
