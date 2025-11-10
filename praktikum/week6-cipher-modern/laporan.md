@@ -202,7 +202,7 @@ Praktikum ini berhasil mengimplementasikan dan membandingkan tiga algoritma krip
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
-commit abc12345
+commit 4742b0461241c39b69698d16a58d0aa86796560d
 Author: Deviana Ainul Riqoh <vaniadevania83@gmail.com>
 Date:   2025-11-09
 
