@@ -156,7 +156,7 @@ Protokol Diffie-Hellman berhasil dalam menciptakan kunci rahasia bersama yang id
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
-commit abc12345
+commit a698cb90fec14725d5a9f55ccafc742d31e7cc3a
 Author: Deviana Ainul Riqoh <vaniadevania83@gmail.com>
 Date:   2025-11-12
 
