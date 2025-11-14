@@ -119,11 +119,12 @@ Hasil eksekusi program Caesar Cipher:
 ---
 
 ## 7. Jawaban Pertanyaan
+(Jawab pertanyaan diskusi yang diberikan pada modul.  
 1.	Mengapa Diffie-Hellman memungkinkan pertukaran kunci di saluran publik?
 Protokol Diffie-Hellman memungkinkan penetapan kunci rahasia bersama melalui saluran publik yang tidak aman karena mengandalkan sifat asimetris dari Masalah Logaritma Diskrit (Discrete Logarithm Problem/DLP) dalam aritmetika modular.
-1.	Publik vs. Rahasia: Protokol ini menggunakan parameter publik (P dan G) dan nilai-nilai yang dipertukarkan (Kunci Publik A dan B). Namun, untuk menghasilkan kunci bersama (K), pihak manapun (Alice atau Bob) harus mengetahui kunci rahasia pribadi mereka (a atau b).
-2.	Kunci Bersama: Kunci bersama K dihitung sebagai K = g^{ab} \pmod{P}$. Meskipun eavesdropper (penyadap) mengetahui g^a \pmod{P} dan g^b \pmod{P}, sangat sulit secara komputasi untuk menghitung eksponen rahasia a atau b (memecahkan DLP) ketika P adalah bilangan prima yang sangat besar.
-3.	Kerahasiaan Eksponen: Karena penyadap tidak dapat menentukan eksponen rahasia a atau b dalam waktu yang wajar, penyadap juga tidak dapat menghitung kunci bersama K. Ini memastikan bahwa rahasia K hanya diketahui oleh dua pihak yang memiliki eksponen pribadi yang benar.
+  a. Publik vs. Rahasia: Protokol ini menggunakan parameter publik (P dan G) dan nilai-nilai yang dipertukarkan (Kunci Publik A dan B). Namun, untuk menghasilkan kunci bersama (K), pihak manapun (Alice atau Bob) harus mengetahui kunci rahasia pribadi mereka (a atau b).
+  b. Kunci Bersama: Kunci bersama K dihitung sebagai K = g^{ab} \pmod{P}$. Meskipun eavesdropper (penyadap) mengetahui g^a \pmod{P} dan g^b \pmod{P}, sangat sulit secara komputasi untuk menghitung eksponen rahasia a atau b (memecahkan DLP) ketika P adalah bilangan prima yang sangat besar.
+  c. Kerahasiaan Eksponen: Karena penyadap tidak dapat menentukan eksponen rahasia a atau b dalam waktu yang wajar, penyadap juga tidak dapat menghitung kunci bersama K. Ini memastikan bahwa rahasia K hanya diketahui oleh dua pihak yang memiliki eksponen pribadi yang benar.
 
 2.	Apa kelemahan utama protokol Diffie-Hellman murni?
 Kelemahan utama dari protokol Diffie-Hellman murni (tanpa modifikasi atau integrasi tambahan) adalah kurangnya otentikasi dari pihak-pihak yang berkomunikasi.
@@ -132,14 +133,14 @@ Kelemahan utama dari protokol Diffie-Hellman murni (tanpa modifikasi atau integr
 
 3.	Bagaimana cara mencegah serangan MITM pada protokol ini?
 Serangan MITM dicegah dengan menambahkan mekanisme yang memberikan otentikasi identitas ke dalam proses pertukaran kunci. Cara yang paling umum dilakukan adalah:
-1.	Sertifikat Digital (PKI):
+  a. Sertifikat Digital (PKI):
 o	Setiap pihak (Alice dan Bob) menggunakan Sertifikat Digital yang dikeluarkan oleh Certificate Authority (CA) tepercaya. Sertifikat ini secara kriptografi mengikat kunci publik mereka ke identitas mereka yang sebenarnya.
 o	Dalam protokol modern seperti TLS/SSL, pertukaran kunci DH (atau varian seperti DHE/ECDHE) hanya dilakukan setelah server (dan terkadang klien) membuktikan identitasnya menggunakan tanda tangan digital dari sertifikatnya.
-2.	Diffie-Hellman Tanda Tangan (Signed DH):
+  b. Diffie-Hellman Tanda Tangan (Signed DH):
 o	Pihak-pihak yang berkomunikasi menandatangani (menggunakan kunci privat yang sudah ada, misalnya dari RSA atau ECDSA) nilai-nilai kunci publik DH yang mereka hasilkan (A atau B) sebelum mengirimkannya.
 o	Penerima memverifikasi tanda tangan menggunakan kunci publik yang diketahui dari pengirim. Jika tanda tangan valid, penerima yakin bahwa kunci publik DH tersebut benar-benar berasal dari pihak yang diklaim.
 
-
+)
 ---
 
 ## 8. Kesimpulan
@@ -156,7 +157,7 @@ Protokol Diffie-Hellman berhasil dalam menciptakan kunci rahasia bersama yang id
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
-commit a698cb90fec14725d5a9f55ccafc742d31e7cc3a
+commit 0be4910d7e7180f561ae1faad1eef8112e38b6d4
 Author: Deviana Ainul Riqoh <vaniadevania83@gmail.com>
 Date:   2025-11-12
 
