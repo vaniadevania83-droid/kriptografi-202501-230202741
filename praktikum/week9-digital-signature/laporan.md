@@ -125,15 +125,12 @@ Hasil eksekusi program Caesar Cipher:
 ---
 
 ## 8. Kesimpulan
-(Berdasarkan praktikum implementasi tanda tangan digital menggunakan algoritma RSA, dapat disimpulkan bahwa mekanisme ini efektif dalam menjamin otentikasi dan integritas data. Percobaan membuktikan bahwa tanda tangan yang dibuat dengan kunci privat pengirim hanya dapat diverifikasi valid menggunakan kunci publik yang sesuai, dan setiap upaya modifikasi pada pesan asli akan menghasilkan nilai hash yang berbeda, menyebabkan kegagalan verifikasi. Hal ini menunjukkan bahwa tanda tangan digital tidak hanya memvalidasi identitas pengirim, tetapi juga melindungi data dari perubahan yang tidak sah selama transmisi.  )
+Berdasarkan praktikum implementasi tanda tangan digital menggunakan algoritma RSA, dapat disimpulkan bahwa mekanisme ini efektif dalam menjamin otentikasi dan integritas data. Percobaan membuktikan bahwa tanda tangan yang dibuat dengan kunci privat pengirim hanya dapat diverifikasi valid menggunakan kunci publik yang sesuai, dan setiap upaya modifikasi pada pesan asli akan menghasilkan nilai hash yang berbeda, menyebabkan kegagalan verifikasi. Hal ini menunjukkan bahwa tanda tangan digital tidak hanya memvalidasi identitas pengirim, tetapi juga melindungi data dari perubahan yang tidak sah selama transmisi.  
 
 ---
 
 ## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
+
 
 ---
 
