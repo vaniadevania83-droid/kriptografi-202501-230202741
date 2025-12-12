@@ -1,5 +1,5 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: 10
+Minggu ke-:10
 Topik: [pki]  
 Nama: [Deviana Ainul Riqoh]  
 NIM: [230202741]  
