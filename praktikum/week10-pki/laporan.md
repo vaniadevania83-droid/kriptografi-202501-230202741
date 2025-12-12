@@ -1,6 +1,6 @@
 # Laporan Praktikum Kriptografi
 Minggu ke-: 10
-Topik: [Public Key Infrastructure (PKI) & Certificate Authority (CA)]  
+Topik: [pki]  
 Nama: [Deviana Ainul Riqoh]  
 NIM: [230202741]  
 Kelas: [5IKRB]  
