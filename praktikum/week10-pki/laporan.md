@@ -1,5 +1,5 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
+Minggu ke-: 10
 Topik: [Public Key Infrastructure (PKI) & Certificate Authority (CA)]  
 Nama: [Deviana Ainul Riqoh]  
 NIM: [230202741]  
@@ -128,7 +128,7 @@ Contoh:
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
-commit abc12345
+commit e0fbd7e400a0a2eec10f809a169ae5ca78a9d816
 Author: Deviana Ainul Riqoh <vaniadevania83@gmail.com>
 Date:   2025-12-13
 
