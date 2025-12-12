@@ -1,9 +1,10 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-:10
-Topik: [pki]  
+Minggu ke-: 10  
+Topik: [PKI]  
 Nama: [Deviana Ainul Riqoh]  
 NIM: [230202741]  
 Kelas: [5IKRB]  
+ 
 
 ---
 
