@@ -1,9 +1,9 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
+Minggu ke-: 12  
 Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Nama: [Deviana Ainul Riqoh]  
+NIM: [230202741]  
+Kelas: [5IKRB]  
 
 ---
 

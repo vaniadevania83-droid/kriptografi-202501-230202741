@@ -15,8 +15,7 @@ Kelas: [5IKRB]
 ---
 
 ## 2. Dasar Teori
-Caesar Cipher merupakan salah satu teknik enkripsi paling sederhana dan paling awal yang dikenal dalam kriptografi. Algoritma ini termasuk dalam jenis Cipher Substitusi, di mana setiap huruf pada teks terang (plaintext) digantikan oleh huruf lain yang memiliki selisih posisi tertentu dalam alfabet. Pergeseran ini bersifat statis dan dikenal sebagai "kunci" (k).
-Di mana x adalah nilai numerik dari karakter (A=0, B=1, ..., Z=25) dan k adalah nilai pergeseran. Karena hanya memiliki 25 kemungkinan kunci fungsional, algoritma ini sangat rentan terhadap serangan brute-force.
+Shamir's Secret Sharing (SSS) adalah algoritma kriptografi yang memungkinkan sebuah rahasia dipecah menjadi n bagian (shares), di mana rahasia tersebut hanya dapat direkonstruksi jika minimal ada k bagian yang dikumpulkan (k \le n). Algoritma ini didasarkan pada konsep matematika Interpolasi Polinomial Lagrange.Dalam skema (k, n), sebuah polinomial derajat k-1 dibuat dengan rahasia asli sebagai konstanta a_0. Titik-titik pada kurva polinomial tersebut kemudian dibagikan kepada para partisipan. Secara matematis, mustahil untuk menentukan polinomial tersebut (dan menemukan a_0) jika titik yang dimiliki kurang dari k.
 ---
 
 ## 3. Alat dan Bahan
@@ -27,12 +26,11 @@ Di mana x adalah nilai numerik dari karakter (A=0, B=1, ..., Z=25) dan k adalah 
 ---
 
 ## 4. Langkah Percobaan
-1.  Membuka terminal dan melakukan navigasi ke folder proyek: praktikum/week2-cryptosystem/.
-2. Membuat file baru bernama caesar_cipher.py di dalam subfolder src/.
-3. Menuliskan logika fungsi encrypt dan decrypt sesuai dengan rumus modular aritmetika.
-4. Menambahkan fungsi main untuk menerima input pengguna berupa pesan dan jumlah pergeseran.
-5. Menjalankan program melalui terminal dengan perintah python src/caesar_cipher.py.
-6. Melakukan commit hasil pekerjaan ke repositori lokal dan melakukan push ke GitHub.
+1. Membuat struktur folder praktikum/week11-secret-sharing/src/.
+2. Menginstal library yang dibutuhkan menggunakan perintah pip install secretsharing.
+3. Membuat file secret_sharing.py dan mengimplementasikan fungsi untuk membagi rahasia menjadi 5 bagian dengan threshold 3.
+4. Menjalankan skrip untuk memverifikasi bahwa rahasia dapat pulih dengan 3 shares, namun gagal jika kurang dari itu.
+5. Mendokumentasikan hasil eksekusi dalam bentuk screenshot.
 ---
 
 ## 5. Source Code
@@ -40,39 +38,92 @@ Di mana x adalah nilai numerik dari karakter (A=0, B=1, ..., Z=25) dan k adalah 
 Gunakan blok kode:
 
 ```python
-def caesar_cipher(text, shift, mode='encrypt'):
-    result = ""
-    
-    # Menyesuaikan shift untuk dekripsi
-    if mode == 'decrypt':
-        shift = -shift
-    
-    for i in range(len(text)):
-        char = text[i]
-        
-        # Enkripsi/Dekripsi karakter huruf besar
-        if char.isupper():
-            result += chr((ord(char) + shift - 65) % 26 + 65)
-        # Enkripsi/Dekripsi karakter huruf kecil
-        elif char.islower():
-            result += chr((ord(char) + shift - 97) % 26 + 97)
-        else:
-            # Karakter non-alfabet tidak diubah
-            result += char
-            
-    return result
+import random
+from typing import List, Tuple
 
-# Contoh Penggunaan
+# Fungsi untuk menghitung Modular Inverse (penting untuk pembagian dalam modulo)
+def inverse(a, p):
+    return pow(a, p - 2, p)
+
+# 1. Implementasi Pembagian Rahasia (Split)
+def split_secret(secret: int, k: int, n: int, p: int) -> List[Tuple[int, int]]:
+    """
+    secret: rahasia dalam angka
+    k: threshold (minimal share)
+    n: total shares yang dibuat
+    p: bilangan prima (harus lebih besar dari secret dan n)
+    """
+    if k > n:
+        raise ValueError("Threshold tidak boleh lebih besar dari total n")
+    
+    # Membuat koefisien polinomial secara acak: f(x) = secret + a1*x + a2*x^2 + ...
+    # a0 adalah secret itu sendiri
+    coefficients = [secret] + [random.randint(0, p - 1) for _ in range(k - 1)]
+    
+    def f(x):
+        result = 0
+        for i, coeff in enumerate(coefficients):
+            result = (result + coeff * pow(x, i, p)) % p
+        return result
+    
+    # Membuat n buah koordinat (x, f(x)) sebagai shares
+    return [(i, f(i)) for i in range(1, n + 1)]
+
+# 2. Implementasi Rekonstruksi Rahasia (Recover menggunakan Lagrange Interpolation)
+def recover_secret(shares: List[Tuple[int, int]], p: int) -> int:
+    """
+    shares: daftar koordinat (x, y)
+    p: bilangan prima yang sama saat split
+    """
+    secret = 0
+    k = len(shares)
+    
+    for i in range(k):
+        xi, yi = shares[i]
+        num = 1
+        den = 1
+        for j in range(k):
+            if i == j:
+                continue
+            xj, yj = shares[j]
+            # Rumus Lagrange L_i(0) = PROD( -xj / (xi - xj) )
+            num = (num * -xj) % p
+            den = (den * (xi - xj)) % p
+        
+        # S_i = yi * L_i(0)
+        term = (yi * num * inverse(den, p)) % p
+        secret = (secret + term) % p
+        
+    return (secret + p) % p
+
+# --- Main Program ---
 if __name__ == "__main__":
-    message = input("Masukkan pesan: ")
-    key = int(input("Masukkan kunci (angka): "))
+    # Parameter: Bilangan prima besar (Mersenne Prime 2^13 - 1 sebagai contoh sederhana)
+    P = 2**31 - 1 
+    SECRET = 20251117  # Rahasia berupa angka (Contoh: NIM atau PIN)
+    K = 3 # Minimal 3 orang
+    N = 5 # Dibagi ke 5 orang
+
+    print(f"Rahasia Asli: {SECRET}")
     
-    encrypted = caesar_cipher(message, key, 'encrypt')
-    decrypted = caesar_cipher(encrypted, key, 'decrypt')
+    # Langkah 1: Splitting
+    shares = split_secret(SECRET, K, N, P)
+    print("\nShares yang dihasilkan:")
+    for s in shares:
+        print(f"Partisipan {s[0]}: {s[1]}")
+
+    # Langkah 2: Rekonstruksi (Gunakan 3 shares acak)
+    subset_shares = shares[:3] 
+    recovered = recover_secret(subset_shares, P)
     
-    print(f"\nPlaintext  : {message}")
-    print(f"Ciphertext : {encrypted}")
-    print(f"Decrypted  : {decrypted}")
+    print("\n--- Hasil Uji ---")
+    print(f"Menggunakan {len(subset_shares)} shares.")
+    print(f"Rahasia yang dipulihkan: {recovered}")
+    
+    if recovered == SECRET:
+        print("Status: BERHASIL (Rahasia Cocok)")
+    else:
+        print("Status: GAGAL")
 ```
 )
 
@@ -86,7 +137,7 @@ if __name__ == "__main__":
 
 Hasil eksekusi program Caesar Cipher:
 
-![Hasil Eksekusi](/praktikum/week11-secret-sharing/srenshoot/hasil-secret%20sharing.png)
+![Hasil Eksekusi](/praktikum/week11-secret-sharing/srenshoot/hasil-scret-sharing.png)
 
 )
 
@@ -110,7 +161,7 @@ Skenario yang paling nyata adalah pada Penyimpanan Kunci Utama (Master Key) Domp
 ---
 
 ## 8. Kesimpulan
-Praktikum ini membuktikan bahwa Caesar Cipher bekerja dengan prinsip substitusi sederhana berbasis pergeseran posisi alfabet menggunakan operasi modulo 26. Melalui implementasi Python, terlihat bahwa algoritma ini sangat bergantung pada kerahasiaan kunci, namun sangat tidak aman untuk melindungi data sensitif karena jumlah kombinasi kunci yang sangat terbatas (hanya 25 kemungkinan) sehingga mudah ditembus dengan metode brute-force. Selain itu, karena karakter non-alfabet tidak dienkripsi, struktur pesan tetap terlihat, yang menunjukkan bahwa algoritma klasik ini hanya cocok digunakan untuk tujuan edukasi dasar mengenai logika enkripsi.
+Praktikum ini menunjukkan bahwa Shamir’s Secret Sharing adalah metode distribusi rahasia yang sangat efektif karena memanfaatkan sifat polinomial untuk menciptakan ambang batas keamanan. Dengan SSS, fleksibilitas operasional meningkat tanpa harus mengorbankan kerahasiaan data aslinya.
 
 ---
 
