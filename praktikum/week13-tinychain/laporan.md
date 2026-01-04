@@ -1,6 +1,6 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: 12  
-Topik: [judul praktikum]  
+Minggu ke-: 13  
+Topik: [TinyChain – Proof of Work (PoW)]  
 Nama: [Deviana Ainul Riqoh]  
 NIM: [230202741]  
 Kelas: [5IKRB]  
@@ -158,5 +158,5 @@ commit abc12345
 Author: Deviana Ainul Riqoh <vaniadevania83@gmail.com>
 Date:   2025-12-24
 
-    week13-cryptosystem: secret sharing (shamir's secret sharing) )
+    week13-cryptosystem: TinyChain – Proof of Work (PoW) )
 ```
