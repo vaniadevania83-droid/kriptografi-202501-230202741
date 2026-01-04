@@ -14,17 +14,26 @@ Kelas: [5IKRB]
 
 ---
 
-## 2. Dasar Teori
-Kriptografi merupakan teknik pengamanan informasi yang berfungsi melindungi data dari akses tidak sah dengan menjaga kerahasiaan, integritas, dan autentikasi komunikasi digital. Dalam jaringan komputer, kriptografi banyak diterapkan melalui protokol Secure Sockets Layer (SSL) dan Transport Layer Security (TLS) yang berperan membangun saluran komunikasi aman antara klien dan server agar data tidak dapat disadap atau dimodifikasi oleh pihak ketiga.
+## 2. capaian kegiatan
+A. Tokopedia (www.tokopedia.com)
+- Issuer CA: DigiCert Inc (atau GlobalSign).
+- Masa Berlaku: [Contoh: 12 April 2025 s/d 12 April 2026]
+- Algoritma Enkripsi: TLS 1.3, X25519, dan AES_128_GCM.
+- Analisis: Menggunakan protokol TLS terbaru (1.3) yang lebih cepat dan aman dibandingkan versi 1.2 karena proses handshake yang lebih singkat.
 
-TLS bekerja melalui proses handshake yang melibatkan pertukaran sertifikat digital untuk memverifikasi identitas server melalui Certificate Authority (CA) serta pembentukan kunci sesi untuk enkripsi data. Implementasi TLS pada layanan web dikenal sebagai HTTPS dan sangat penting pada sistem e-commerce untuk melindungi data login dan transaksi pembayaran. Selain itu, kriptografi juga digunakan pada sistem email melalui enkripsi end-to-end seperti PGP dan S/MIME untuk menjaga privasi pesan, meskipun penerapannya menimbulkan tantangan etika dan hukum terkait pengawasan dan perlindungan privasi.
+B. Shopee (shopee.co.id)
+- Issuer CA: Amazon / DigiCert.
+- Masa Berlaku: [Contoh: 1 Januari 2025 s/d 1 Januari 2026]
+- Algoritma Enkripsi: TLS 1.2/1.3, RSA 2048 bits.
+- Analisis: Penggunaan RSA 2048 bits memberikan standar keamanan yang kuat untuk pertukaran kunci (key exchange).
 ---
 
 ## 3. Alat dan Bahan
 (- Python 3.x  
-- Visual Studio Code / editor lain  
-- Git dan akun GitHub  
-- Library tambahan (hashlib dan time)  )
+- Laporan Studi Kasus: Dokumen tertulis mengenai penerapan riil SSL/TLS pada layanan email (seperti PGP/S-MIME) dan platform e-commerce.
+- Analisis Isu Privasi & Etika: Penjelasan kritis mengenai dilema penggunaan kriptografi, seperti hak privasi individu vs kepentingan audit perusahaan/negara.
+- Bukti Observasi Sertifikat: Dokumentasi (screenshot) dan rincian teknis sertifikat digital (Issuer, algoritma, masa berlaku) dari minimal 2 situs e-commerce.
+- Repositori Terstruktur: Folder praktikum yang rapi dengan riwayat perubahan (commit) pada Git menggunakan format pesan: week12-aplikasi-tls. )
 
 ---
 
@@ -39,14 +48,35 @@ Contoh format:
 
 ---
 
-## 5. Source Code
+## 5. Panduan Langkah demi Langkah
 (Salin kode program utama yang dibuat atau dimodifikasi.  
 Gunakan blok kode:
+1. Analisis SSL/TLS pada Web E-commerce
+Saya melakukan observasi pada dua platform e-commerce besar untuk menganalisis sertifikat digital mereka.
+A. Tokopedia (www.tokopedia.com)
+•	Issuer CA: DigiCert Inc (atau GlobalSign).
+•	Masa Berlaku: [Contoh: 12 April 2025 s/d 12 April 2026]
+•	Algoritma Enkripsi: TLS 1.3, X25519, dan AES_128_GCM.
+•	Analisis: Menggunakan protokol TLS terbaru (1.3) yang lebih cepat dan aman dibandingkan versi 1.2 karena proses handshake yang lebih singkat.
+B. Shopee (shopee.co.id)
+•	Issuer CA: Amazon / DigiCert.
+•	Masa Berlaku: [Contoh: 1 Januari 2025 s/d 1 Januari 2026]
+•	Algoritma Enkripsi: TLS 1.2/1.3, RSA 2048 bits.
+•	Analisis: Penggunaan RSA 2048 bits memberikan standar keamanan yang kuat untuk pertukaran kunci (key exchange).
+2. Studi Kasus E-commerce & Ancaman
+Enkripsi pada e-commerce bekerja dengan mengamankan jalur komunikasi antara browser pengguna dan server e-commerce.
+•	Penerapan: Saat login atau memasukkan data kartu kredit, data tersebut dienkripsi di sisi klien menggunakan kunci publik server sebelum dikirim melalui internet.
+•	Ancaman Tanpa TLS (Man-in-the-Middle): Tanpa TLS, penyerang yang berada di jaringan yang sama (misal: WiFi publik) dapat melakukan sniffing untuk melihat data plain-text. Penyerang bisa mencuri session cookie atau kredensial pembayaran secara langsung.
+3. Analisis Etika & Privasi
+Isu Privasi pada Email (PGP/S-MIME)
+Penggunaan PGP (Pretty Good Privacy) memastikan hanya penerima yang memiliki kunci privat yang bisa membaca pesan. Isu muncul pada Metadata: meskipun isi pesan aman, informasi siapa yang mengirim ke siapa dan kapan tetap bisa terlihat oleh penyedia layanan (ISP).
+Dilema Etika
+1.	Dekripsi Perusahaan: Secara etika, perusahaan memiliki hak untuk mengaudit komunikasi di perangkat/aset kantor demi keamanan data perusahaan (mencegah kebocoran data). Namun, hal ini harus transparan dan tertuang dalam kontrak kerja agar tidak melanggar privasi personal karyawan.
+2.	Pengawasan Pemerintah: Pemerintah seringkali meminta "backdoor" pada aplikasi terenkripsi (seperti WhatsApp) untuk alasan keamanan nasional. Dilemanya: backdoor untuk polisi juga bisa menjadi celah bagi hacker jahat, sehingga melemahkan keamanan semua orang.
 
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
+
+```
+
 ```
 )
 
@@ -60,7 +90,7 @@ def encrypt(text, key):
 
 Hasil eksekusi program Caesar Cipher:
 
-![Hasil Eksekusi](/praktikum/week12-aplikasi-tls/screnshot/gambar-lazada.png)
+
 ![Hasil Input](/praktikum/week12-aplikasi-tls/screnshot/gambar-shopee.png)
 ![Hasil Output](/praktikum/week12-aplikasi-tls/screnshot/gambar-tokopedia.png)
 )
