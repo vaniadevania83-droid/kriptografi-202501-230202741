@@ -1,6 +1,6 @@
 # Laporan Praktikum Kriptografi
 Minggu ke-: 12  
-Topik: [Aplikasi TLS & E-commerce]  
+Topik: [Aplikasi TLS&E-commerce]  
 Nama: [Deviana Ainul Riqoh]  
 NIM: [230202741]  
 Kelas: [5IKRB]  
