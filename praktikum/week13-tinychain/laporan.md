@@ -154,7 +154,7 @@ Contoh:
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
-commit abc12345
+commit 4ef1984601ae0cf7513076904026daf7caf97617
 Author: Deviana Ainul Riqoh <vaniadevania83@gmail.com>
 Date:   2025-12-24
 
