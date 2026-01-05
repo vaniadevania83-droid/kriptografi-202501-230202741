@@ -30,10 +30,10 @@ B. Shopee (shopee.co.id)
 
 ## 3. Alat dan Bahan
 (- Python 3.x  
-- Laporan Studi Kasus: Dokumen tertulis mengenai penerapan riil SSL/TLS pada layanan email (seperti PGP/S-MIME) dan platform e-commerce.
-- Analisis Isu Privasi & Etika: Penjelasan kritis mengenai dilema penggunaan kriptografi, seperti hak privasi individu vs kepentingan audit perusahaan/negara.
-- Bukti Observasi Sertifikat: Dokumentasi (screenshot) dan rincian teknis sertifikat digital (Issuer, algoritma, masa berlaku) dari minimal 2 situs e-commerce.
-- Repositori Terstruktur: Folder praktikum yang rapi dengan riwayat perubahan (commit) pada Git menggunakan format pesan: week12-aplikasi-tls. )
+- Python 3.11  
+- Visual Studio Code / editor lain  
+- Git dan akun GitHub  
+- Library tambahan (hashlib dan time) )
 
 ---
 
