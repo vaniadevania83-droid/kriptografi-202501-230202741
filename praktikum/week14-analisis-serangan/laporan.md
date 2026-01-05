@@ -120,7 +120,7 @@ Contoh:
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
-commit abc12345
+commit 8bcbef237e00eab6dd1c55d1b1f7b0f1f3b84efe
 Author: Deviana Ainul Riqoh <vaniadevania83@gmail.com>
 Date:   2026-01-04
 
